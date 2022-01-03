@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from blog.models import Blog, Contact
 import math
 
@@ -7,7 +7,7 @@ def home(request):
     return render(request, 'index.html')
 
 def blog(request):
-    no_of_posts = 4
+    no_of_posts = 6
     #if request.GET['pageno']
     page = request.GET.get('page')
     if page is None:

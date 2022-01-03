@@ -19,10 +19,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             selector: '#id_content',
             paste_data_images: true,
 
-            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
             imagetools_cors_hosts: ['picsum.photos'],
-            menubar: 'file edit view insert format tools table help',
-            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+            menubar: 'file edit view insert format tools table tc help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment',
             toolbar_sticky: true,
             autosave_ask_before_unload: true,
             autosave_interval: '30s',
@@ -72,9 +71,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             noneditable_noneditable_class: 'mceNonEditable',
             toolbar_mode: 'sliding',
             contextmenu: 'link image imagetools table',
-            skin: useDarkMode ? 'oxide-dark' : 'oxide',
-            content_css: useDarkMode ? 'dark' : 'default',
-            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+
+
         });
 
 
