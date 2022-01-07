@@ -11,6 +11,8 @@
 <div class="container">
 
 <h1 class="my-3">{{blog.title}}</h1>
+<h6>Published by: {{blog.author}}</h6>
+{% if blog.author %}{% endif %}
 <div class="row">
     {{blog.content| safe}}
 </div>
