@@ -1,7 +1,7 @@
 from django.contrib import admin
+from . import models
 from blog.models import Blog, Contact
 
-# Register your models here.
 
 class BlogAdmin(admin.ModelAdmin):
     class Media:
@@ -12,4 +12,3 @@ class BlogAdmin(admin.ModelAdmin):
         js = ("js/blog.js",)
 
 admin.site.register(Blog, BlogAdmin)
-admin.site.register(Contact)
