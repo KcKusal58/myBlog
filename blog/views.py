@@ -3,7 +3,7 @@ from django.http import request
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from blog.models import Blog, Contact
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView
 import math
 
 # Create your views here.
@@ -11,7 +11,7 @@ def home(request):
     return render(request, 'index.html')
 
 def blog(request):
-    no_of_posts = 6
+    no_of_posts = 4
     #if request.GET['pageno']
     page = request.GET.get('page')
     if page is None:
@@ -33,11 +33,7 @@ def blog(request):
     context = {'blogs': blogs, 'prev': prev, 'nxt': nxt}
     return render(request, 'bloghome.html', context)
 
-class PostListView(ListView):
-        model = Blog
-        template_name = 'bloghome.html'
-        context_object_name = 'blogs'
-        #ordering = ['-date_posted']
+
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Blog

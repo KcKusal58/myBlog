@@ -15,14 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import PostListView, PostCreateView, PostUpdateView, PostDeleteView
+from .views import PostCreateView, PostUpdateView, PostDeleteView
 from blog import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('blog/', PostListView.as_view(), name='blog'),
+    path('blog/', views.blog, name='blog'),
+    #path('blog/', PostListView.as_view(), name='blog'),
     path('blog/new/', PostCreateView.as_view(), name='blog-new'),
-    path('blogpost/<str:slug>/update/', PostUpdateView.as_view(), name='blog-update'),
+    path('blogpost/<int:pk>/update/', PostUpdateView.as_view(), name='blog-update'),
     path('blogpost/<str:slug>/delete/', PostDeleteView.as_view(), name='blog-delete'),
     path('search/', views.search, name='search'),
     path('blogpost/<str:slug>', views.blogpost, name='blog-slug'),

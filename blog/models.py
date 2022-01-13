@@ -8,7 +8,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     short_desc = models.CharField(max_length=300, default="")
-    author = models.CharField(max_length=20, default="Kushal KC")
+    author = models.CharField(max_length=20, default="kusal")
     slug = models.CharField(max_length=100)
     #publisher = models.ForeignKey(User , on_delete=models.CASCADE)
 
